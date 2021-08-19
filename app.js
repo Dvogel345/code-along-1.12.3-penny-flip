@@ -20,8 +20,10 @@ let updateScoreBoard = function () {
 
     // Update the values in the scoreboard for each value
     for (let i = 0; i < allFlips.length; i++) {
-        document.getElementById(`td${i+1}`).textContent = allFlips[i]
-        document.getElementById(`td${i+1}-percent`).textContent = allPercents[i] + '%'
+        document.getElementById(`heads`).textContent = allFlips[i]
+        document.getElementById(`tails`).textContent = allFlips[i]
+        document.getElementById(`heads-percent`).textContent = allPercents[i] + '%'
+        document.getElementById(`tails-percent`).textContent = allPercents[i] + '%'
     }
 }
 
@@ -38,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function(){
         else {document.getElementById('message').textContent = `You flipped Heads!`}
 
         // Add one to the count of number of flips for the number
-        // remember arraysare indexed from zero, so its one less that the flipped/ rolled value
         allFlips[flippedValue - 1] += 1
 
         // Show different images for each coin
