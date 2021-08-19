@@ -20,10 +20,10 @@ let updateScoreBoard = function () {
 
     // Update the values in the scoreboard for each value
     for (let i = 0; i < allFlips.length; i++) {
-        document.getElementById(`heads`).textContent = allFlips[i]
-        document.getElementById(`tails`).textContent = allFlips[i]
-        document.getElementById(`heads-percent`).textContent = allPercents[i] + '%'
-        document.getElementById(`tails-percent`).textContent = allPercents[i] + '%'
+        document.getElementById(`heads`).textContent = allFlips[1]
+        document.getElementById(`tails`).textContent = allFlips[0]
+        document.getElementById(`heads-percent`).textContent = allPercents[1] + '%'
+        document.getElementById(`tails-percent`).textContent = allPercents[0] + '%'
     }
 }
 
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
         // Update scoreboard
         updateScoreBoard()
     })
+
     document.getElementById('clear').addEventListener('click', function(){
         // Resets the flip values to zero
         allFlips = [0,0]
