@@ -1,3 +1,4 @@
+// Global value
 // All flips array  tracks a count for each position
 let allFlips = [0,0]
 
@@ -51,7 +52,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
     document.getElementById('clear').addEventListener('click', function(){
         // Resets the flip values to zero
-        allFlips = [0,0]
+        console.log('supposed to clear the score')
+        // allFlips = [0,0];
+        // reset values to 0 by targeting id directly
+        document.getElementById(`heads`).textContent = 0;
+        document.getElementById(`tails`).textContent = 0;
+        document.getElementById(`heads-percent`).textContent = 0;
+        document.getElementById(`tails-percent`).textContent = 0;
     })
 
     document.getElementById('message').textContent = 'Let\'s Get Flipping!'
